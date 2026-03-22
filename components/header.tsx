@@ -8,7 +8,7 @@ import { useState } from "react"
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const whatsappLink = "https://wa.me/1234567890?text=Hola,%20me%20gustaría%20cotizar%20llantas"
+  const whatsappLink = "https://wa.me/573016046740?text=Hola,%20me%20gustaría%20cotizar%20llantas"
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">

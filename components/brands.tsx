@@ -1,14 +1,16 @@
 "use client"
 
+import Image from "next/image"
+
 const brands = [
-  { name: "Michelin", logo: "MICHELIN" },
-  { name: "Bridgestone", logo: "BRIDGESTONE" },
-  { name: "Goodyear", logo: "GOODYEAR" },
-  { name: "Continental", logo: "CONTINENTAL" },
-  { name: "Pirelli", logo: "PIRELLI" },
-  { name: "Hankook", logo: "HANKOOK" },
-  { name: "Yokohama", logo: "YOKOHAMA" },
-  { name: "Dunlop", logo: "DUNLOP" },
+  { name: "Michelin", logo: "/brands/michelin.svg" },
+  { name: "Bridgestone", logo: "/brands/bridgestone.svg" },
+  { name: "Goodyear", logo: "/brands/goodyear.svg" },
+  { name: "Continental", logo: "/brands/continental.svg" },
+  { name: "Pirelli", logo: "/brands/pirelli.svg" },
+  { name: "Hankook", logo: "/brands/hankook.svg" },
+  { name: "Yokohama", logo: "/brands/yokohama.svg" },
+  { name: "Dunlop", logo: "/brands/dunlop.svg" },
 ]
 
 export function Brands() {
@@ -24,17 +26,23 @@ export function Brands() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {brands.map((brand) => (
-            <div
-              key={brand.name}
-              className="group bg-background border border-border rounded-xl p-8 flex items-center justify-center hover:border-primary/50 hover:shadow-lg transition-all duration-300"
-            >
-              <span className="text-lg md:text-xl font-bold tracking-wider text-muted-foreground group-hover:text-primary transition-colors duration-300">
-                {brand.logo}
-              </span>
-            </div>
-          ))}
+        <div className="overflow-hidden">
+          <div className="flex animate-marquee w-max">
+            {[...brands, ...brands].map((brand, i) => (
+              <div
+                key={`${brand.name}-${i}`}
+                className="flex-shrink-0 mx-8 flex items-center justify-center opacity-80 hover:opacity-100 transition-all duration-300"
+              >
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={160}
+                  height={60}
+                  className="h-12 md:h-16 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-8">
