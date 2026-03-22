@@ -33,10 +33,10 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonios" className="py-20 bg-background">
+    <section id="testimonios" className="py-14 lg:py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center mb-8 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-3">
             Clientes Satisfechos
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -44,11 +44,11 @@ export function Testimonials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-muted/30 border border-border rounded-xl p-6 hover:border-primary/30 transition-colors duration-300"
+              className="bg-muted/30 border border-border rounded-xl p-4 sm:p-6 hover:border-primary/30 transition-colors duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (

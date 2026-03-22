@@ -28,10 +28,10 @@ export function Products() {
   const whatsappLink = "https://wa.me/573016046740?text=Hola,%20me%20gustaría%20cotizar%20llantas"
 
   return (
-    <section id="productos" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col gap-4 mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-balance">
+    <section id="productos" className="py-14 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-3 mb-10 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-balance">
             Nuestros Productos
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl">
@@ -39,7 +39,7 @@ export function Products() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {products.map((product) => (
             <Card key={product.id} className="group overflow-hidden border-0 bg-card shadow-sm hover:shadow-md transition-shadow">
               <div className="relative aspect-[4/3] bg-secondary">
