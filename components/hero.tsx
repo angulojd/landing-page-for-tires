@@ -31,8 +31,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative aspect-square lg:aspect-[4/5] w-full max-w-lg mx-auto lg:max-w-none">
-            <div className="absolute inset-0 bg-secondary rounded-2xl overflow-hidden">
+          <div className="relative w-full max-w-lg mx-auto lg:max-w-none">
+            <div className="relative aspect-square lg:aspect-[4/5] bg-secondary rounded-2xl overflow-hidden">
               <Image
                 src="/images/tire-hero.jpg"
                 alt="Llanta de alta calidad"
